@@ -20,4 +20,6 @@ K06: StI/O: Divine Your Destiny!
 * What are lists good for?
     * A list is used to store values as different indexes.
     * Compared to dictionaries, the elements in the list are in order
+* How does weighted randomized selection work?
+    * We generated a random number that was within 0 and the total percentage in the csv file
  
