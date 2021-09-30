@@ -1,7 +1,7 @@
 # SUMMATIVE ASSESSMENT
 Team Polar - Jesse Xie, Rachel Xiao, Yuqing Wu  
 SoftDev   
-K07: Show What You Know
+K07: Show What You Know  
 2021-09-29  
 
 
