@@ -1,0 +1,12 @@
+Team Magnificent Robot Mouse - Jesse Xie, Sophie Liu, David Chong
+SoftDev
+K08: Cross Pollination and Virtual Insanity
+2021-09-30
+
+https://docs.python.org/3/using/cmdline.html?
+- The -m command accepts a module-name as a parameter, and executes the
+  contents of it. In this case, the module name is venv.
+- The venv module creates a virtual environment under the name inputted, which
+  is ~/myherozero in this case.
+- In the folder of the created virtual environment, a cfg file under the name
+  pyvenv, a bin, include, lib, and share folder
