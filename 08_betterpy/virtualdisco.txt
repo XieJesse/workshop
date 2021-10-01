@@ -3,10 +3,12 @@ SoftDev
 K08: Cross Pollination and Virtual Insanity
 2021-09-30
 
+Sources:
 https://docs.python.org/3/using/cmdline.html?
-- The -m command accepts a module-name as a parameter, and executes the
-  contents of it. In this case, the module name is venv.
-- The venv module creates a virtual environment under the name inputted, which
-  is ~/myherozero in this case.
-- In the folder of the created virtual environment, a cfg file under the name
-  pyvenv, a bin, include, lib, and share folder
+https://towardsdatascience.com/virtual-environments-104c62d48c54
+
+- The -m command accepts a module-name as a parameter, and executes the contents of it. In this case, the module name is venv.
+- The venv module creates a virtual environment under the name inputted, which is ~/myherozero in this case.
+- The folder of the created virtual environment contains a cfg file under the name pyvenv, as well as bin, include, lib, and share folders.
+- The virtual environment that is created may have its own unique packages separate from other virtual environments created. These packages are isolated and only installed for the use of a single application rather than for the entire system.
+- When the virtual environment is executed, work that is produced in the virtual environment is cut off from the rest of system and is only limited by the packages that have been put into the virtual environment.
