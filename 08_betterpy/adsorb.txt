@@ -11,4 +11,4 @@ Comments:
 find the job class, and others added percentage values until the random value was surpassed. Others utilized built in methods to assemble dictionaries and find a
 random job weighted.
 Concerns:
-
+- Is the purpose of looking at other people's code more to understand alternative thought methods or more to adopt tricks and methods from their code?
