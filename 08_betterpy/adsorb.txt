@@ -4,8 +4,11 @@ K08: Cross Pollination and Virtual Insanity
 2021-09-30
 
 Questions:
+- Is there a difference between manually reading + spliting the data from the csv file with split() and using methods from the csv file library?
 - Are dictionaries more useful than lists when trying to generate weighted randomness?
 Comments:
-- It's interesting how people found different ways to implement a weighted random selection: some people removed percentages from their random number generated to find the job class, and others added percentage values until the random value was surpassed. Others utilized built in methods to assemble dictionaries and find a random job weighted.
+- It's interesting how people found different ways to implement a weighted random selection: some people removed percentages from their random number generated to
+find the job class, and others added percentage values until the random value was surpassed. Others utilized built in methods to assemble dictionaries and find a
+random job weighted.
 Concerns:
 
