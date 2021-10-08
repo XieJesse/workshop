@@ -1,3 +1,8 @@
+#Team Cheese: Jesse Xie (with Polly), Wen Hao Dong (with Jal Hordan), Justin Zou (with Piggy)
+#SoftDev
+#K13 -- Template for Success
+#2021-10-08
+
 from flask import Flask, render_template
 import occupations
 
