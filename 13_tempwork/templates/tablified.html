@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Random Occupation Generator by Team Cheese #1</title>
+        <style>
+        table {
+          border-collapse: collapse ;
+        }
+          td,th {
+            border: 1px solid #dddddd ;
+            text-align: left ;
+          }
+          td {
+              font-weight: normal ;
+          }
+        </style>
+    </head>
+    <body>
+        Random Occupation: {{ occ }}
+        <h1>K13 -- Template for Success</h1>
+        <h2>Team Cheese</h2>
+        <h3>The Gang:</h3>
+        <ul>
+            <li>Jesse Xie (with Polly)</li>
+            <li>Wen Hao Dong (with Jal Hordan)</li>
+            <li>Justin Zou (with Piggy)</li>
+        </ul>
+
+        <br/>
+        <table>
+          <tr>
+            <th>Job Classes</th>
+          </tr>
+          {% for job in joblist %}
+            <tr>
+              <td>{{ job }}</td>
+            </tr>
+          {% endfor %}
+        </table>
+    </body>
+</html>
