@@ -1,9 +1,9 @@
 <!--
   Team Cheese: Jesse Xie (with Polly), Wen Hao Dong (with Jal Hordan), Justin Zou (with Piggy)
   SoftDev
-  K13 -- Template for Success
+  K13 - Template for Success
   2021-10-08
- -->
+-->
 
  <!DOCTYPE html>
 <html>
@@ -36,11 +36,15 @@
         <br/>
         <table>
           <tr>
-            <th>Job Classes</th>
+            <th>Job Class</th>
+            <th>Percentage</th>
+            <th>Link</th>
           </tr>
-          {% for job in joblist %}
+          {% for job, values in data.items() %}
             <tr>
               <td>{{ job }}</td>
+              <td>{{ values[0] }}</td>
+              <td>{{ values[1] }}</td>
             </tr>
           {% endfor %}
         </table>
