@@ -1,0 +1,21 @@
+Team Cheese: Jesse Xie (with Polly), Wen Hao Dong (with Jal Hordan), Justin Zou (with Piggy)
+SoftDev
+K13 - Template for Success
+2021-10-08
+
+About Code:
+- <ul> was used to make a bullet point list, with <li> defining a new point.
+- <style> was used to edit how the table looked, so that the data was formatted
+well enough.
+- <table> was used to make a table with <tr> to declare a new row in the table,
+as well as <th> and <td> to define headings and normal text in tables respectively.
+
+EGO:
+- This heavily applies to our class where we work in groups of three and look at
+the code of our peers very frequently. We rotate groups so that we can have
+different perspectives looking at code and exchange newer ideas amongst newer
+minds.
+- Rotating groups on the same project lets everyone get a grasp on the general
+collection of ideas in the code of the project. I think that not many people
+have fallen behind in comprehending the work, and even if they have, they catch
+up very quickly with their groups.
