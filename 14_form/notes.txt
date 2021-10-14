@@ -1,0 +1,22 @@
+Team threeCoffeePeanuts: Jesse Xie, Yaying Liang Li, Ryan Wang
+SoftDev
+K14 -- Form and Function
+2021-10-14
+
+*What does echo mean? to print what the user inputted
+**What is a request method? The 'Get' and 'Post' methods
+
+Predictions:
+-When you're in default page of website ("/"), terminal prints out...
+  -app Flask object, request, the arguments of request, and the header of request
+  -request is just another module of Flask (like render_template)
+  - "Waaaa hooo...." is printed in webpage
+  
+  *In authenicate, the requests won't be asked because there's no render_template(<template>)
+  
+Observations:
+-There was only 1 input box when we ran the "/" page - but there are two input <> in HTML file
+  -*Removing second input line in HTML file removes the "Submit Query" button!! (can still submit using /enter/)
+  -If you click on "Submit Query" --> user is brought to /auth page
+  -Why? Because <form action="/auth"> makes the form perform this action when the code inside <form> </form> is executed 
+  
