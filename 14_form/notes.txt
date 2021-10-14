@@ -5,18 +5,23 @@ K14 -- Form and Function
 
 *What does echo mean? to print what the user inputted
 **What is a request method? The 'Get' and 'Post' methods
+***Is pressing the submit button on the form the same as pressing enter on the keyboard? If so, is there any purpose in having a submit input button?
 
 Predictions:
 -When you're in default page of website ("/"), terminal prints out...
   -app Flask object, request, the arguments of request, and the header of request
   -request is just another module of Flask (like render_template)
   - "Waaaa hooo...." is printed in webpage
-  
-  *In authenicate, the requests won't be asked because there's no render_template(<template>)
-  
+
+  *In authenticate, the requests won't be asked because there's no render_template(<template>)
+
 Observations:
+-In the terminal, information including the name of the flask object, the website that is opened, any arguments, and "heading information" is printed
+  -In the default page of the website that is accessed, there are no arguments in the arguments dictionary printed in the terminal
+  -The input of the form becomes a variable called 'username' as put in login.html
 -There was only 1 input box when we ran the "/" page - but there are two input <> in HTML file
-  -*Removing second input line in HTML file removes the "Submit Query" button!! (can still submit using /enter/)
-  -If you click on "Submit Query" --> user is brought to /auth page
-  -Why? Because <form action="/auth"> makes the form perform this action when the code inside <form> </form> is executed 
-  
+  -Removing second input line in HTML file removes the "Submit Query" button!! (can still submit using /enter/)
+  -If you click on "Submit Query" --> user is brought to /auth page (with the variables containing the arguments being present in the url)
+  -Why? Because <form action="/auth"> makes the form perform this action when the code inside <form> </form> is executed
+-Removing the ""&sub1=Submit" from the url removes ('sub1', 'Submit') from the dictionary
+  -Changing the arguments put in the url directly changes the data in the dictionary as seen in the terminal
