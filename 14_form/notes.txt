@@ -25,3 +25,8 @@ Observations:
   -Why? Because <form action="/auth"> makes the form perform this action when the code inside <form> </form> is executed
 -Removing the ""&sub1=Submit" from the url removes ('sub1', 'Submit') from the dictionary
   -Changing the arguments put in the url directly changes the data in the dictionary as seen in the terminal
+
+-We realized that the username inputted would be stored in request. So we used request.args['username'] to get it. 
+-It seems that for forms, the default method is "get"
+-Then, when rendering the template, we set method=request.method (which tells us the method used, "get" or "post") and username=username
+-We also wanted to have some fun with some ASCII art related to our team name, and after fiddling around a bit, we figured out that <pre> keeps the spaces in the art.
