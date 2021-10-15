@@ -51,8 +51,9 @@ def authenticate():
     #print(request.args['username'])
     print("***DIAG: request.headers ***")
     print(request.headers)
-    return "Waaaa hooo HAAAH"  #response to a form submission
-
+    
+    username = request.args['username']
+    return render_template('response.html', method=request.method, username=username)  #response to a form submission
 
     
 if __name__ == "__main__": #false if this file imported as module
