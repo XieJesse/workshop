@@ -52,19 +52,20 @@ def disp_loginpage():
 
 @app.route("/auth") # , methods=['GET', 'POST'])
 def authenticate():
+    #hard coding single username and password
     actualUsername = "threeCoffeePeanuts"
     actualpassword = "oneWalnutLatte"
-    username = request.args['username'] #access value of key 'username' in Dict
-    password = request.args['password'] #access value of key 'username' in Dict
+    username = request.args['username']
+    password = request.args['password']
     '''
         use response.html as template
         method (called in response.html) is actually the request.method (which is get)
         username (called in response.html) is actually username (from this python file)
     '''
-    if (username == actualUsername) and (password == actualpassword):
-        return render_template('response.html', method=request.method, username=username, password = password)  #response to a form submission
+    if (username == actualUsername) and (password == actualpassword): #comparing input and hard coded user/pass
+        return render_template('response.html', method=request.method, username=username, password = password)  #response to correct user/pass
     else:
-        return render_template( 'login.html' )
+        return render_template( 'login.html' ) #response to wrong user/pass
 
 if __name__ == "__main__": #false if this file imported as module
     #enable debugging, auto-restarting of server when this file is modified
