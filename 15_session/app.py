@@ -26,6 +26,7 @@ PROTIP: Insert your own in-line comments wherever they will help your future sel
 
 @app.route("/") #, methods=['GET', 'POST'])
 def disp_loginpage():
+    '''
     print("\n\n\n")
     print("***DIAG: this Flask obj ***")
     print(app) #<Flask 'app'>
@@ -41,6 +42,7 @@ def disp_loginpage():
     print("***DIAG: request.headers ***")
     print(request.headers)
     '''
+    '''
         form prompts user to enter username in webpage;
         <name="username"> saves the user's inputted name under the key "username" in the ImmutableMultiDict
         <form action="/auth"> after user submits, takes the user to <host>/auth?username=...
@@ -50,26 +52,19 @@ def disp_loginpage():
 
 @app.route("/auth") # , methods=['GET', 'POST'])
 def authenticate():
-    print("\n\n\n") #new lines in terminal
-    print("***DIAG: this Flask obj ***")
-    print(app)
-    print("***DIAG: request obj ***") #gives you actual http link of page you're on
-    print(request) #<Request 'http://127.0.0.1:5000/auth?username=ajdskdksa&sub1=Submit' [GET]>
-    print("***DIAG: request.args ***")
-    print(request.args) #ImmutableMultiDict([('username', 'ajdskdksa'), ('sub1', 'Submit')])
-    #print("***DIAG: request.args['username']  ***")
-    #print(request.args['username'])
-    print("***DIAG: request.headers ***")
-    print(request.headers) #Host: 127.0.0.1:5000
-
+    actualUsername = "threeCoffeePeanuts"
+    actualpassword = "oneWalnutLatte"
     username = request.args['username'] #access value of key 'username' in Dict
+    password = request.args['password'] #access value of key 'username' in Dict
     '''
         use response.html as template
         method (called in response.html) is actually the request.method (which is get)
         username (called in response.html) is actually username (from this python file)
     '''
-    return render_template('response.html', method=request.method, username=username)  #response to a form submission
-
+    if (username == actualUsername) and (password == actualpassword):
+        return render_template('response.html', method=request.method, username=username, password = password)  #response to a form submission
+    else:
+        return render_template( 'login.html' )
 
 if __name__ == "__main__": #false if this file imported as module
     #enable debugging, auto-restarting of server when this file is modified
