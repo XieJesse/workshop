@@ -7,6 +7,7 @@
 from flask import Flask             #facilitate flask webserving
 from flask import render_template   #facilitate jinja templating
 from flask import request           #facilitate form submission
+from flask import sessions
 
 #the conventional way:
 #from flask import Flask, render_template, request
@@ -14,58 +15,29 @@ from flask import request           #facilitate form submission
 app = Flask(__name__)    #create Flask object
 
 
-'''
-trioTASK:
-~~~~~~~~~~~ BEFORE RUNNING THIS, ~~~~~~~~~~~~~~~~~~
-...read for understanding all of the code below.
-Some will work as written; other sections will not. Can you predict which?
-Devise some simple tests you can run to "take apart this engine," as it were.
-Execute your tests. Process results.
-PROTIP: Insert your own in-line comments wherever they will help your future self and/or current teammates understand what is going on.
-'''
-
 @app.route("/") #, methods=['GET', 'POST'])
 def disp_loginpage():
-    '''
-    print("\n\n\n")
-    print("***DIAG: this Flask obj ***")
-    print(app) #<Flask 'app'>
-    print("***DIAG: request obj ***")
-    print(request)
-    print("***DIAG: request.args ***")
-    print(request.args)
-    #empty dict cuz user hasn't submitted anything yet
 
-    #request.args['username'] doesn't exist yet, cuz user didn't submit username yet
-    #print("***DIAG: request.args['username']  ***")
-    #print(request.args['username'])
-    print("***DIAG: request.headers ***")
-    print(request.headers)
-    '''
-    '''
-        form prompts user to enter username in webpage;
-        <name="username"> saves the user's inputted name under the key "username" in the ImmutableMultiDict
-        <form action="/auth"> after user submits, takes the user to <host>/auth?username=...
-    '''
     return render_template( 'login.html' )
 
 
 @app.route("/auth") # , methods=['GET', 'POST'])
 def authenticate():
     #hard coding single username and password
-    actualUsername = "threeCoffeePeanuts"
-    actualpassword = "oneWalnutLatte"
+    logins = {
+        "coffee":"peanut"
+    }
     username = request.args['username']
     password = request.args['password']
-    '''
-        use response.html as template
-        method (called in response.html) is actually the request.method (which is get)
-        username (called in response.html) is actually username (from this python file)
-    '''
-    if (username == actualUsername) and (password == actualpassword): #comparing input and hard coded user/pass
-        return render_template('response.html', method=request.method, username=username, password = password)  #response to correct user/pass
+
+    if (username in logins and logins[username] == password):
+        return render_template('response.html', method=request.method, username=username, password = password)
+    elif (username in logins and logins[username] != password):
+        error = "user exists but wrong password"
+        return render_template( 'login.html', error=error)
     else:
-        return render_template( 'login.html' ) #response to wrong user/pass
+        error = "Error: that username does not exist"
+        return render_template( 'login.html', error=error)
 
 if __name__ == "__main__": #false if this file imported as module
     #enable debugging, auto-restarting of server when this file is modified
