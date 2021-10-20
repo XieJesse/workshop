@@ -24,7 +24,7 @@ real_passwd = "peanut"
 
 @app.route("/", methods=['GET', 'POST'])
 def disp_loginpage():
-    print(app.secret_key)
+    # print(app.secret_key)
     if not session.get(real_user):
         # if session doesn't have the correct login info, i.e. you are not signed in
         return render_template('login.html')
