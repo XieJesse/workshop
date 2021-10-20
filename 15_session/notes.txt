@@ -2,3 +2,24 @@ Team threeCoffeePeanuts: Jesse Xie, Yaying Liang Li, Ryan Wang
 SoftDev
 K15 -- Sessions Greetings
 2021-10-18
+
+Notes:
+-Control + Shift + J: opens web console on firefox
+-Conditionals are more cost-efficient than error-handling; use conditionals to see which method was used, and thus respond accordingly (if request.method == "get")
+-Session info becomes gibberish as a result of our secret_key
+
+-username: coffee
+-password: peanut
+
+Discoveries:
+**When we're in our local site, web console displays request.obj (with /favicon), and the method, and has the heading information
+-(Tentative) Have 3 functions in app.py that correspond to 1) input username + password page, 2) username/pass is incorrect page (failed), 3) username + pass is correct page (works)
+-1 submit button total for username + password
+-Use separate elif statements so we know which error messages to give out
+-With the sessions module, we could add the usernames and passwords to a session dictionary
+    -We did so whenever the inputted username and password matched with our hardcoded one
+-The session is encrypted with the secret_key, making our cookies secure
+-Redirecting to a logout page let us pop out the current session and log us out without any issues
+-We used if not session.get(real_user): to verify if the current user is the actual user through the sessions dictionary, which let us logout without needing to input anything
+-Using the password input type lets the characters in the form that are inputted to be hidden rather than as plaintext
+-Had if real_user in session: in logout method such that you can only logout if there is a session to log out from
