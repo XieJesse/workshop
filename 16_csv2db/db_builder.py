@@ -15,11 +15,19 @@ c = db.cursor()               #facilitate db ops -- you will use cursor to trigg
 #==========================================================
 
 
-# < < < INSERT YOUR TEAM'S POPULATE-THE-DB CODE HERE > > >
+command = "CREATE TABLE IF NOT EXISTS roster (name TEXT, age INTEGER, userid INTEGER) "
+c.execute((command))    # run SQL statement
+
+with open('students.csv') as csv_file:
+    reader = csv.reader(csv_file, delimiter=',')
+    for row in reader:
+        if row[0] != "name":
+            info = [row[0], row[1], row[2]]
+            addData = "INSERT INTO roster VALUES(?,?,?)"
+            c.execute(addData,info)
 
 
-command = ""          # test SQL stmt in sqlite3 shell, save as string
-c.execute(command)    # run SQL statement
+
 
 #==========================================================
 
