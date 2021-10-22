@@ -14,7 +14,8 @@ c = db.cursor()               #facilitate db ops -- you will use cursor to trigg
 
 #==========================================================
 
-
+clearTable = "DROP TABLE IF EXISTS roster"
+c.execute((clearTable))
 command = "CREATE TABLE IF NOT EXISTS roster (name TEXT, age INTEGER, userid INTEGER) "
 c.execute((command))    # run SQL statement
 
