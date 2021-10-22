@@ -15,6 +15,7 @@ c = db.cursor()               #facilitate db ops -- you will use cursor to trigg
 #==========================================================
 
 #roster table
+# c.execute('.mode column ') # DO THIS LATER FOR CONVENIENCE
 clearTable = "DROP TABLE IF EXISTS roster" # clear if the tables exists
 c.execute((clearTable))
 command1 = "CREATE TABLE IF NOT EXISTS roster (name TEXT, age INTEGER, id INTEGER) " # create table if it does not exist with parameters
@@ -24,7 +25,7 @@ with open('students.csv') as csv_file: # read students csv file
     reader = csv.reader(csv_file, delimiter=',')
     for row in reader:
         if row[0] != "name":
-            info = [row[0], row[1], row[2]] # add data from csv file to list
+            info = [row[0], int(row[1]), int(row[2])] # add data from csv file to list
             addData = "INSERT INTO roster VALUES(?,?,?)" # accept parameters in values
             c.execute(addData,info) # add parameters to addData command
 
@@ -38,7 +39,7 @@ with open('courses.csv') as csv_file: # read classes csv file
     reader = csv.reader(csv_file, delimiter=',')
     for row in reader:
         if row[0] != "code":
-            info = [row[0], row[1], row[2]] # add data from csv file to list
+            info = [row[0], int(row[1]), int(row[2])] # add data from csv file to list
             addData = "INSERT INTO classes VALUES(?,?,?)" # accept parameters in values
             c.execute(addData,info) # add parameters to addData command
 
