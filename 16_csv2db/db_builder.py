@@ -14,20 +14,33 @@ c = db.cursor()               #facilitate db ops -- you will use cursor to trigg
 
 #==========================================================
 
-clearTable = "DROP TABLE IF EXISTS roster"
+#roster table
+clearTable = "DROP TABLE IF EXISTS roster" # clear if the tables exists
 c.execute((clearTable))
-command = "CREATE TABLE IF NOT EXISTS roster (name TEXT, age INTEGER, userid INTEGER) "
-c.execute((command))    # run SQL statement
+command1 = "CREATE TABLE IF NOT EXISTS roster (name TEXT, age INTEGER, id INTEGER) " # create table if it does not exist with parameters
+c.execute((command1))    # run SQL statement
 
-with open('students.csv') as csv_file:
+with open('students.csv') as csv_file: # read students csv file
     reader = csv.reader(csv_file, delimiter=',')
     for row in reader:
         if row[0] != "name":
-            info = [row[0], row[1], row[2]]
-            addData = "INSERT INTO roster VALUES(?,?,?)"
-            c.execute(addData,info)
+            info = [row[0], row[1], row[2]] # add data from csv file to list
+            addData = "INSERT INTO roster VALUES(?,?,?)" # accept parameters in values
+            c.execute(addData,info) # add parameters to addData command
 
+#classes table
+clearTable = "DROP TABLE IF EXISTS classes" # clear if the tables exists
+c.execute((clearTable))
+command2 = "CREATE TABLE IF NOT EXISTS classes (name TEXT, mark INTEGER, id INTEGER) " # create table if it does not exist with parameters
+c.execute((command2))    # run SQL statement
 
+with open('courses.csv') as csv_file: # read classes csv file
+    reader = csv.reader(csv_file, delimiter=',')
+    for row in reader:
+        if row[0] != "code":
+            info = [row[0], row[1], row[2]] # add data from csv file to list
+            addData = "INSERT INTO classes VALUES(?,?,?)" # accept parameters in values
+            c.execute(addData,info) # add parameters to addData command
 
 
 #==========================================================
