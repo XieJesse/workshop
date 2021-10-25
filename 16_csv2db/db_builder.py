@@ -23,7 +23,6 @@ def populate(filename, tablename):
                 c.execute(addData,info) # add parameters to addData command
 
 #roster table
-# c.execute('.mode column ') # DO THIS LATER FOR CONVENIENCE
 clearTable = "DROP TABLE IF EXISTS roster" # clear if the tables exists
 c.execute((clearTable))
 command1 = "CREATE TABLE IF NOT EXISTS roster (name TEXT, age INTEGER, id INTEGER) " # create table if it does not exist with parameters

@@ -3,6 +3,33 @@ SoftDev
 K16 -- All About Database
 2021-10-20
 
+Notes:
+- sqlite is a terminal
+** python3 <db-builder.py> --> generates a .db file
+** sqlite3 discobandit.db --> runs db file and the commands in it
+-in python file, c.execute(...) means run this in the SQL shell
+-standard: capitalize SQL commands
+
+-for clean living (stylistic choices), we do: <var> = "SQL command"
+ie. addData = f"INSERT INTO {tablename} VALUES(?,?,?)"
+*** what are those QUESTION MARKS???!!! indicates parameters: user has to input the arguments/values for those parameters when we execute the command
+-one way to do that shown below^^^:
+
+```
+info = [row[0], int(row[1]), int(row[2])]
+addData = f"INSERT INTO {tablename} VALUES(?,?,?)"
+c.execute(addData,info)
+#save the values of the parameters into a list (info); input list (info) when we call the command
+```
+
+-"DROP TABLE <roster>" means delete the table roster
+-"DROP TABLE IF EXISTS <roster>" means delete the table roster if it exists
+-seems like commands are stackable?
+
+-.mode column makes tables look *amazinggg*
+-.mode line is next best
+
+
 Relational database
 
 DB that stores information as a collection of tables.
