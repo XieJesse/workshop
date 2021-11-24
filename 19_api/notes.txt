@@ -1,0 +1,8 @@
+Team Vengeful Mice: Raymond Yeung and Jesse Xie
+SoftDev pd2
+K19 -- A RESTful Journey Skyward
+2021-11-23
+
+- API returns data in JSON format and using the JSON library, we can convert JSON formatted data into python dictionaries.
+- urllib.request.urlopen() is useful in extracting data from urls.
+- response_info = json.loads(data.read()) did not work for some reason, so a variable had to be created that was data.read()
