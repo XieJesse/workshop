@@ -19,7 +19,8 @@ def main():
     response_info = json.loads(response)
     # load into dictionary
     picture = response_info['url']
-    return render_template('main.html', picture = picture)
+    explanation = response_info['explanation']
+    return render_template('main.html', picture = picture, explanation = explanation)
 
 if __name__ == "__main__":
     app.debug = True
