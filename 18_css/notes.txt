@@ -1,0 +1,8 @@
+Team Vengeful Mice: Raymond Yeung and Jesse Xie
+SoftDev pd2
+K18 -- CSS basics
+2021-11-23
+
+- The html code for inline css is very cluttered and hard to digest
+- In comparison, it is much easier to read the contents of the html code in the
+internal CSS
