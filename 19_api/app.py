@@ -10,10 +10,14 @@ import urllib
 app = Flask(__name__)
 
 @app.route("/")
-def test():
-    data = urllib.request.urlopen('https://api.nasa.gov/planetary/apod?api_key=W4wJIqBrRcjVnc4PPIP6FJ8l64Jc1ecLi4Ye7dU4')
+def main():
+    f = open("key_nasa.txt")
+    key = f.read()
+    # read key from file
+    data = urllib.request.urlopen('https://api.nasa.gov/planetary/apod?api_key=' + (key))
     response = data.read()
     response_info = json.loads(response)
+    # load into dictionary
     picture = response_info['url']
     return render_template('main.html', picture = picture)
 
