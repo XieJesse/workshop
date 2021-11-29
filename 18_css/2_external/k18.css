@@ -1,0 +1,46 @@
+body {
+  background: grey ;
+  font-family: arial ;
+}
+
+h1 {
+  margin-bottom: 15px;
+  padding: 5px;
+  background: lightgray;
+  text-align: center;
+  color: white ;
+}
+
+h3 {
+  margin: 5px;
+}
+
+ul {
+  margin-left:-35px;
+  list-style-type: none;
+  width:150px;
+  float:left;
+}
+
+li {
+  font-weight: bold;
+  text-decoration: none;
+  color: lightgray;
+}
+
+h2 {
+  margin-top:-30px;
+  margin-left:175px;
+}
+
+p {
+  margin-left:175px;
+}
+
+footer {
+  margin-top:-20px;
+  padding: 10px;
+  background: dimgray;
+  text-align: right;
+  color: grey;
+}

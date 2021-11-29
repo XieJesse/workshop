@@ -1,0 +1,12 @@
+Team Vengeful Mice: Raymond Yeung and Jesse Xie
+SoftDev pd2
+K18 -- CSS basics
+2021-11-23
+
+- The html code for inline css is very cluttered and hard to digest
+- In comparison, it is much easier to read the contents of the html code in the
+internal and external CSS
+- The internal and external CSS are similar, but the styling for external is
+saved in a css file instead of in the html file
+- Having the styling in another file makes it easier to concentrate on the
+actual contents of the html file
