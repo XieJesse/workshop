@@ -5,3 +5,4 @@ K22 -- Who Does Frame Work For?
 
 - We have a top bar that has the assignment name and a few buttons
 - The callout below it contains a greeting
+- Cards contain images and text, and look good
