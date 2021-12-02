@@ -1,0 +1,8 @@
+Team Vengeful Mice: Raymond Yeung and Jesse Xie
+SoftDev pd2
+K23 - No. 2?
+2021-12-01
+
+- Generally, bootstrap was very similar to foundation.
+- Both had ways of implementing features like a top bar, buttons, tables, etc
+- Both had classes that would change how specific features operated
