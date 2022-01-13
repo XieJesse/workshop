@@ -1,0 +1,9 @@
+ElmosStyrofoamChair - Alif Abdullah, Jesse Xie, Raymond Yeung
+SoftDev
+K24 -- Provisioning Droplets
+2022-01-12
+
+Notable Things:
+
+Reminder that ssh public keys are in the .pub file in the .ssh folder
+Root can be sshed into from machines with ssh keys set up
