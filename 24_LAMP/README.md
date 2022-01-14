@@ -7,25 +7,17 @@ Guide to creating an ubuntu 20.04 virtual machine ("droplet") and installing Apa
 
 ### Prerequisites:
 
-- Something you should know beforehand...
-- Something you will need installed beforehand...
+- Digital Ocean account verified and set up
+-
 
-1. Step blah blah blah, and/or...
-1. Step, with `inline code`, and/or...
-1. Step, with
-    ```
-    generic code block or terminal command
-    ```
-   and/or...
-    ```javascript
-    var foo = "this that JS tho";
-    ```
-   and/or...
-    ```python
-    print("this that Python tho")
-    ```
-   and/or...
-1. Step, with [hyperlink](https://xkcd.com)s...
+1. Navigate to the control panel in digital ocean.
+2. Select the "create" and the "droplet" button.
+3. When prompted in the "select an image" section, select the ubuntu image (20.04.3).
+4. In the "choose a plan" section, select all of the regular options and decline all optional settings.
+5. In the "choose a datacenter region" section, select a datacenter located as close to New York as possible, if not in New York.
+6. In the "authentication" section, select SSH keys.
+7. To set up SSH keys for the droplet, on each machine that ssh keys are desired on, 
+8. Finalize the creation of the droplet.
 
 
 ### Resources
