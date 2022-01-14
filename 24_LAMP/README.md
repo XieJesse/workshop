@@ -30,7 +30,8 @@ Guide to creating an ubuntu 20.04 virtual machine ("droplet") and installing Apa
 
 ### Additional Steps:
 
-- 
+- Add a normal user with $ adduser [username] and input all necessary information
+- Add this user to the sudo group (if you wish) with $ usermod -aG sudo [username]
 
 
 ### Resources
@@ -44,7 +45,6 @@ Guide to creating an ubuntu 20.04 virtual machine ("droplet") and installing Apa
 * https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/create-with-openssh/
 * https://www.digitalocean.com/docs/droplets/how-to/connect-with-ssh/openssh/
 
-(please verify ; some of these are old links)
 
 ---
 
