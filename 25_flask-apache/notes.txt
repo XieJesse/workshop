@@ -1,0 +1,14 @@
+ElmosStyrofoamChair - Alif Abdullah, Jesse Xie, Raymond Yeung
+SoftDev
+K25 -- Apache, Jump On It
+2022-01-19
+
+Notable Things:
+
+- the how-to guide was pretty useful, except for a few parts that were confusing
+- for simplicity, the app folder should be located in the /var/www directory (not required but easier)
+- the __init__.py file should be edited so that instead of solely app.run(), it reads if __name__ == "__main__": before it
+- running less -S /path/error.log is less practical than simplying catting the error log file
+
+Questions:
+- how will databases react when multiple users are reading and committing to it at the same time?
