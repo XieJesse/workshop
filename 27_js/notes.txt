@@ -1,4 +1,4 @@
-Team Will Smith
+Team Will Smith - Jesse Xie, Angela Zhang
 SoftDev pd2
 K27 -- Basic functions in JavaScript
 2022-02-04
@@ -11,5 +11,5 @@ DISCO
 
 QCC
 -----------------------------------------------------------------
-* 
+*
 =================================================================
