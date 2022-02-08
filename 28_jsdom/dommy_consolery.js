@@ -97,3 +97,9 @@ var fac = function(n) {
   if(n == 1) return 1 ;
   else return (n * fac(n-1)) ;
 };
+
+var gcd = function(a,b) {
+  if(a < b) return gcd(b,a) ;
+  if(a % b == 0) return b ;
+  else return gcd(b,a%b) ;
+};
