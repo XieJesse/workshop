@@ -103,3 +103,8 @@ var gcd = function(a,b) {
   if(a % b == 0) return b ;
   else return gcd(b,a%b) ;
 };
+
+addItem("10th-fib is: "+fib(10))
+addItem("10 factorial is: "+fac(10))
+addItem("gcd of 148 and 196 is: "+gcd(148,196))
+stripe()
