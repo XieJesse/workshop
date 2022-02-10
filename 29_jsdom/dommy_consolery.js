@@ -85,6 +85,16 @@ var gcd = function(a,b) {
   else return gcd(b,a%b) ;
 };
 
+var index = function(text) {
+  var items = document.getElementsByTagName('li');
+  for(var i = 0; i < items.length; i++) {
+    if (items[i].innerHTML == text) {
+      return i;
+    }
+  }
+  return -1;
+};
+
 addItem("10th-fib is: "+fib(10))
 addItem("10 factorial is: "+fact(10))
 addItem("gcd of 148 and 196 is: "+gcd(148,196))
@@ -92,17 +102,24 @@ stripe()
 
 b1 = document.getElementById("b1");
 b1.addEventListener("click", function() {
-                               addItem("fib(10): "+fib(10));
-                               var orange = document.createElement("h1")
-                               orange.innerHTML = "blueberry pie" ;
-                               orange.setAttribute("class", "orange") ;
-                               document.body.appendChild(orange);
-                             }
+                              var content = "fib(10): "+fib(10);
+                              if (b1.getAttribute("class") == "clicked") {
+                                removeItem(index(content));
+                                b1.removeAttribute("class");
+                              } else {
+                                addItem(content);
+                                b1.setAttribute("class", "clicked");
+                              }
+                            }
                    );
 
 b2 = document.getElementById("b2");
 b2.addEventListener("click", function() {
                                addItem("fact(10): "+fact(10));
+                               var orange = document.createElement("h1")
+                               orange.innerHTML = "blueberry pie" ;
+                               orange.setAttribute("class", "orange") ;
+                               document.body.appendChild(orange);
                              }
                    );
 
