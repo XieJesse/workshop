@@ -101,6 +101,7 @@ addItem("gcd of 148 and 196 is: "+gcd(148,196))
 stripe()
 
 b1 = document.getElementById("b1");
+// toggles value in list
 b1.addEventListener("click", function() {
                               var content = "fib(10): "+fib(10);
                               if (b1.getAttribute("class") == "clicked") {
@@ -114,6 +115,7 @@ b1.addEventListener("click", function() {
                    );
 
 b2 = document.getElementById("b2");
+// adds orange text to body
 b2.addEventListener("click", function() {
                                addItem("fact(10): "+fact(10));
                                var orange = document.createElement("h1")
@@ -124,7 +126,11 @@ b2.addEventListener("click", function() {
                    );
 
 b3 = document.getElementById("b3");
+// sets an element to "purp"
 b3.addEventListener("click", function() {
                                addItem("gcd(36,10): "+gcd(36,10));
+                               div3 = document.getElementById("div3");
+                               div3.innerHTML = "purp";
+                               div3.setAttribute("class", "purple");
                              }
                    );
