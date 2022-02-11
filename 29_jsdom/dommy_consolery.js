@@ -126,11 +126,23 @@ b2.addEventListener("click", function() {
                    );
 
 b3 = document.getElementById("b3");
-// sets an element to "purp"
 b3.addEventListener("click", function() {
                                addItem("gcd(36,10): "+gcd(36,10));
                                div3 = document.getElementById("div3");
                                div3.innerHTML = "purp";
                                div3.setAttribute("class", "purple");
+                             }
+                   );
+
+var papaya = 0 ;
+
+b4 = document.getElementById("b4");
+// sets an element to "purp"
+b4.addEventListener("mouseover", function() {
+                                papaya++ ;
+                                addItem("papaya" + papaya);
+                                if (papaya == 15) {
+                                  document.body.style.backgroundImage = "url(https://cdn-prod.medicalnewstoday.com/content/images/articles/275/275517/a-papaya-cut-in-half.jpg)" ;
+                                }
                              }
                    );
