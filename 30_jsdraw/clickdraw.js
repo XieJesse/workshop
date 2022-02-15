@@ -30,6 +30,15 @@ var drawCircle = (e) => {
   fillStyle(#ff0000) ;
   fill();
   console.log("mouseclick register at ", mouseX, mouseY) ;
+} ;
+
+var draw = (e) => {
+  if (mode == "rect") {
+    drawRect(e) ;
+  }
+  else {
+    drawCircle(e) ;
+  }
 }
 
 var wipeCanvas = function() {
