@@ -1,3 +1,7 @@
+// Team Will Smith -- Jesse Xie, Angela Zhang
+// SoftDev pd2
+// K31 -- canvas based JS animation
+// 2022-02-16
 var c = document.getElementById('playground') ;
 var dotButton = document.getElementById('buttonCircle') ;
 var stopButton = document.getElementById('buttonStop') ;

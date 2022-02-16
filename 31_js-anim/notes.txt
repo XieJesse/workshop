@@ -1,0 +1,4 @@
+Team Will Smith -- Jesse Xie, Angela Zhang
+SoftDev pd2
+K31 -- canvas based JS animation
+2022-02-16
