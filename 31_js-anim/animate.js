@@ -33,7 +33,21 @@ var drawDot = () => {
   if (radius === 0) {
     growing = true ;
   }
+  window.cancelAnimationFrame(requestID) ;
+  requestID = window.requestAnimationFrame(drawDot) ;
+
 
 }
 
+//var stopIt = function() {
+var stopIt = () => {
+  console.log("stopIt invoked...")
+  console.log( requestID );
+
+  window.cancelAnimationFrame(requestID) ;
+
+};
+
+
 dotButton.addEventListener('click',drawDot)
+stopButton.addEventListener('click',stopIt)
