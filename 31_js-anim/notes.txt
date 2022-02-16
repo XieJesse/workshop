@@ -1,4 +1,14 @@
-Team Will Smith -- Jesse Xie, Angela Zhang
+Team Will Smith: Angela Zhang, Jesse Xie
 SoftDev pd2
 K31 -- canvas based JS animation
 2022-02-16
+HTML file for JavaScript canvas work
+
+
+requestID starts at approximately 1 and increases by 1 every frame
+window.cancelAnimationFrame(requestID)
+- requires a requestID to also be updated
+requestID = window.requestAnimationFrame(callback)
+- this works to also prevent acceleration
+- parentheses after callback will make it not work
+-- ex: drawDot() is not going to work
