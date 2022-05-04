@@ -1,0 +1,15 @@
+Jesse Xie
+SoftDev pd2
+K34 -- Another DB Perspective
+2022-05-01
+
+- It's really frequent in my experience to have a database structure planned, implemented, and
+then require large changes as it was not completely and properly conceptualized before it was
+implemented
+- Interesting how fast the scope and range of the tasks that our application needs to be able to
+handle expands so much as more users might use it - applications with millions of users around the
+world must struggle a lot
+- The data diagrams and structure plans are much more complex than the ones that we have
+conceptualized in class, but even so, are not that much more complicated
+- Data models adjust to suit the requirements as demanded by the application, in a loop of expansion
+in userbase and data models
