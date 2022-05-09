@@ -1,0 +1,11 @@
+Jesse Xie
+SoftDev pd2
+K35 -- Another DB Perspective
+2022-05-07
+
+- MongoDB is a noSQL database, so the data is not stored in tables of rows and columns
+- Data is instead stored in collections of documents
+- These documents stored data similar to json files, python dictionaries, and js objects
+in field-value pairs
+- Atlas is a tool that facilitates the storage and retrieval of data in MongoDB
+- Data can be stored in Atlas through clusters, which are configured as replica set
