@@ -1,0 +1,17 @@
+Jesse Xie
+SoftDev pd2
+K36 -- Another DB Perspective
+2022-05-10
+
+- Objects have unique ObjectID values, which distinguish them from other documents in a
+collection (default value if none is inputted)
+- --drop can be used to remove duplicates to resolve a duplicate error
+- .findOne() can be used to quickly get one random document from the collection
+- documents with identical "_id" values cannot exist
+- .insert([]) can be used to add multiple documents to a collection
+- documents in collections can be updated relatively easily just by chaning values with edit
+- updateOne() and updateMany() can be used to update documents in collections matching a query
+- updateMany({query},{"$inc"(increment),{"field",incrementValue}})
+- Can use "$set" to change values, "$push" to add an element to an array
+- deleteOne() and deleteMany() can be used to delete documents in collections matching a query
+- drop() to remove collections
