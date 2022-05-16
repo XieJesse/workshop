@@ -1,0 +1,13 @@
+Jesse Xie
+SoftDev pd2
+K36 -- Another DB Perspective
+2022-05-07
+
+- BSON stores JSON in binary form is desired, and is faster/more efficient than JSON
+- MongoDB stores data as BSON (machine readable) and displays it as BSON (human readable)
+- mongoimport and mongoexport works with json, mongorestore and mongodump works with BSON
+- Database collections can be filtered for documents with specific field and value pairs
+- db.collection.find({ field : value }) works similarly for the shell
+- it can be used to iterate 
+- .count() can be used to find the number of documents matching the input
+- .pretty() makes things easier to read
